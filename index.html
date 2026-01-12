@@ -208,6 +208,7 @@
                                 displayStores.push({
                                     status: status,
                                     owner: owner,
+                                    team: row[2]?.toString().trim() || '',
                                     retailer: row[9]?.toString().trim() || '',
                                     storeNumber: row[11]?.toString().trim() || '',
                                     storeName: row[12]?.toString().trim() || '',
@@ -404,7 +405,14 @@
                                                     {selectedStore.status}
                                                 </span>
                                             </div>
-
+                                            <div>
+                                                <label style={{display: 'block', fontSize: '14px', fontWeight: '500', color: '#6b7280', marginBottom: '8px'}}>
+                                                    Team
+                                                </label>
+                                                <p style={{fontSize: '16px', color: '#111827', margin: 0}}>
+                                                    {selectedStore.team || '—'}
+                                                </p>
+                                            </div>
                                             <div>
                                                 <label style={{display: 'block', fontSize: '14px', fontWeight: '500', color: '#6b7280', marginBottom: '8px'}}>Retailer</label>
                                                 <p style={{fontSize: '16px', color: '#111827', margin: 0}}>{selectedStore.retailer}</p>
